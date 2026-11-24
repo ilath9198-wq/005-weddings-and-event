@@ -43,7 +43,7 @@ export default function PackagesPage() {
   return (
     <div className="min-h-screen bg-sand text-charcoal">
       {/* 1. ATMOSPHERIC PHOTOGRAPHIC HERO */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[75vh] md:min-h-[82vh] flex items-center justify-center overflow-hidden py-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85"
@@ -52,38 +52,41 @@ export default function PackagesPage() {
             priority
             className="object-cover object-center scale-105 transition-transform duration-1000"
           />
-          {/* Dark luxury gradient scrims */}
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-black/50" />
-          <div className="absolute inset-0 bg-burgundy/25 mix-blend-multiply" />
+          {/* Deep luxury gradient scrims for maximum contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-burgundy-950/95 via-burgundy-950/85 to-charcoal-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-burgundy-950 via-transparent to-burgundy-950/70" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-ivory py-24">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-charcoal/60 backdrop-blur-md text-gold text-xs uppercase tracking-[0.25em] mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Investment & Planning Frameworks</span>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-white py-24">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-900/90 border border-gold-400 text-gold-300 text-xs font-mono font-medium tracking-widest uppercase mb-6 backdrop-blur-md shadow-gold-glow">
+            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <span>INVESTMENT & PLANNING FRAMEWORKS</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] mb-6 tracking-tight text-ivory drop-shadow-md">
+          <h1 className="font-editorial text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-wide text-white leading-[1.08] mb-6 drop-shadow-md">
             Bespoke Planning <br />
-            <span className="italic font-light text-gold-light">& Curated Packages</span>
+            <span className="text-gold-gradient italic font-normal lowercase font-editorial">& Curated Packages</span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory/80 font-light leading-relaxed mb-10">
-            Transparent, meticulous planning frameworks tailored for intimate heritage gatherings, destination escapes, and grand multi-day royal celebrations.
+          <p className="font-editorial text-lg sm:text-2xl italic text-white/95 leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow">
+            &ldquo;Transparent, meticulous planning frameworks tailored for intimate heritage gatherings, destination escapes, and grand multi-day royal celebrations.&rdquo;
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* High-Contrast Unmissable CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
             <button
               onClick={() => openConsultation('General Package Consultation')}
-              className="w-full sm:w-auto px-8 py-3.5 bg-gold hover:bg-gold-light text-burgundy-dark font-medium text-sm tracking-wider uppercase transition-all duration-300 shadow-xl rounded-sm hover:shadow-gold/20 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 font-editorial font-bold text-base tracking-wider uppercase rounded-full shadow-[0_4px_25px_rgba(216,194,157,0.5)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
-              Request Custom Estimate
+              <Sparkles className="w-4 h-4 fill-current text-burgundy-950" />
+              <span>Request Custom Estimate</span>
             </button>
             <Link
               href="/planning"
-              className="w-full sm:w-auto px-8 py-3.5 border border-ivory/30 hover:border-gold hover:text-gold text-ivory text-sm tracking-wider uppercase transition-all duration-300 backdrop-blur-sm rounded-sm"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white border-2 border-gold-400/80 hover:border-gold-300 font-editorial font-bold text-base tracking-wider uppercase rounded-full backdrop-blur-md transition-all transform hover:-translate-y-0.5 group cursor-pointer"
             >
-              Explore 9-Phase Journey
+              <span>Explore 9-Phase Journey</span>
+              <ArrowRight className="w-4 h-4 text-gold-300 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -232,10 +235,10 @@ export default function PackagesPage() {
                 <div className={`p-8 pt-0`}>
                   <button
                     onClick={() => openConsultation(pkg.title)}
-                    className={`w-full py-3.5 rounded-sm text-xs uppercase font-medium tracking-widest transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
+                    className={`w-full py-4 rounded-full text-xs uppercase font-bold tracking-widest transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
                       isHighlight
-                        ? 'bg-gold hover:bg-gold-light text-burgundy-dark shadow-xl hover:shadow-gold/30'
-                        : 'bg-burgundy hover:bg-burgundy-light text-ivory'
+                        ? 'bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 shadow-gold-glow'
+                        : 'bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 border border-gold-500/40 shadow-md'
                     }`}
                   >
                     <span>Inquire About This Tier</span>
@@ -369,13 +372,13 @@ export default function PackagesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => openConsultation('Bespoke Architecture Request')}
-              className="px-8 py-3.5 bg-gold hover:bg-gold-light text-burgundy-dark font-medium text-sm tracking-widest uppercase transition-all duration-300 shadow-xl rounded-sm cursor-pointer"
+              className="px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 font-editorial font-bold text-sm tracking-widest uppercase rounded-full shadow-[0_4px_25px_rgba(216,194,157,0.5)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
             >
               Book Private Consultation
             </button>
             <Link
               href="/contact"
-              className="px-8 py-3.5 border border-gold/40 text-gold hover:bg-gold/10 font-medium text-sm tracking-widest uppercase transition-all duration-300 rounded-sm"
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border-2 border-gold-400/80 hover:border-gold-300 font-editorial font-bold text-sm tracking-widest uppercase rounded-full backdrop-blur-md transition-all transform hover:-translate-y-0.5 cursor-pointer"
             >
               Visit Our Private Studios
             </Link>

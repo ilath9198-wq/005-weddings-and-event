@@ -10,7 +10,8 @@ import {
   Sparkles, 
   CheckCircle2, 
   ArrowRight,
-  Compass
+  Compass,
+  Heart
 } from 'lucide-react';
 import { weddingVenues, WeddingVenue } from '../../data/venuesData';
 import { useConsultation } from '../../components/ConsultationContext';
@@ -60,9 +61,30 @@ export default function VenuesPage() {
             <h1 className="font-editorial text-4xl sm:text-6xl font-bold uppercase tracking-wide text-white leading-tight mb-4">
               Prestigious Wedding Venues & Palaces
             </h1>
-            <p className="font-editorial text-lg sm:text-xl italic text-ivory-100/90 leading-relaxed max-w-2xl font-normal">
+            <p className="font-editorial text-lg sm:text-xl italic text-white/95 leading-relaxed max-w-2xl font-normal mb-8">
               &ldquo;Discover majestic Rajputana fortresses, serene lakeside pavilions, and private oceanfront retreats hand-curated for extraordinary weddings.&rdquo;
             </p>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <button
+                onClick={() => openConsultation('Venue Scouting Inquiry')}
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 font-editorial font-bold text-sm sm:text-base tracking-wider uppercase rounded-full shadow-[0_4px_25px_rgba(216,194,157,0.5)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              >
+                <Heart className="w-4 h-4 fill-current text-burgundy-950" />
+                <span>Inquire About Venues</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  const el = document.getElementById('venues-catalog');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white border-2 border-gold-400/80 hover:border-gold-300 font-editorial font-bold text-sm sm:text-base tracking-wider uppercase rounded-full backdrop-blur-md transition-all transform hover:-translate-y-0.5 group cursor-pointer"
+              >
+                <span>Browse All 7 Sanctuaries</span>
+                <ArrowRight className="w-4 h-4 text-gold-300 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -70,7 +92,7 @@ export default function VenuesPage() {
       {/* =========================================================================
           VENUE CATALOG WITH CATEGORY FILTER
           ========================================================================= */}
-      <section className="py-20 bg-ivory-50 border-t border-gold-500/20">
+      <section id="venues-catalog" className="py-20 bg-ivory-50 border-t border-gold-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter Pills */}
           <div className="flex items-center justify-center gap-2 overflow-x-auto pb-4 mb-14 scrollbar-none no-scrollbar">

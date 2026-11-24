@@ -35,47 +35,50 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-sand text-charcoal">
       {/* 1. ATMOSPHERIC PHOTOGRAPHIC HERO */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[75vh] md:min-h-[82vh] flex items-center justify-center overflow-hidden py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=2000&q=85"
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85"
             alt="Royal Wedding Celebrations Portfolio"
             fill
             priority
             className="object-cover object-center scale-105 transition-transform duration-1000"
           />
-          {/* Dark luxury gradient scrims */}
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-black/50" />
-          <div className="absolute inset-0 bg-burgundy/25 mix-blend-multiply" />
+          {/* Deep luxury gradient scrims for maximum contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-burgundy-950/95 via-burgundy-950/85 to-charcoal-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-burgundy-950 via-transparent to-burgundy-950/70" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-ivory py-24">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-charcoal/60 backdrop-blur-md text-gold text-xs uppercase tracking-[0.25em] mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Curated Celebrations</span>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-white py-24">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-900/90 border border-gold-400 text-gold-300 text-xs font-mono font-medium tracking-widest uppercase mb-6 backdrop-blur-md shadow-gold-glow">
+            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <span>CURATED CELEBRATIONS & ROYAL RETROSPECTIVE</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] mb-6 tracking-tight text-ivory drop-shadow-md">
+          <h1 className="font-editorial text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-wide text-white leading-[1.08] mb-6 drop-shadow-md">
             Our Royal Celebrations <br />
-            <span className="italic font-light text-gold-light">& Signature Stories</span>
+            <span className="text-gold-gradient italic font-normal lowercase font-editorial">& Signature Stories</span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory/80 font-light leading-relaxed mb-10">
-            A retrospective of timeless unions, grand palace mandaps, candlelit floral glasshouses, and coastal vows curated with unmatched bespoke elegance.
+          <p className="font-editorial text-lg sm:text-2xl italic text-white/95 leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow">
+            &ldquo;A retrospective of timeless unions, grand palace mandaps, candlelit floral glasshouses, and coastal vows curated with unmatched bespoke elegance.&rdquo;
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* High-Contrast Unmissable CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-3.5 bg-gold hover:bg-gold-light text-burgundy-dark font-medium text-sm tracking-wider uppercase transition-all duration-300 shadow-xl rounded-sm hover:shadow-gold/20"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 font-editorial font-bold text-base tracking-wider uppercase rounded-full shadow-[0_4px_25px_rgba(216,194,157,0.5)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
-              Curate Your Celebration
+              <Heart className="w-4 h-4 fill-current text-burgundy-950" />
+              <span>Curate Your Celebration</span>
             </Link>
             <Link
               href="/packages"
-              className="w-full sm:w-auto px-8 py-3.5 border border-ivory/30 hover:border-gold hover:text-gold text-ivory text-sm tracking-wider uppercase transition-all duration-300 backdrop-blur-sm rounded-sm"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white border-2 border-gold-400/80 hover:border-gold-300 font-editorial font-bold text-base tracking-wider uppercase rounded-full backdrop-blur-md transition-all transform hover:-translate-y-0.5 group cursor-pointer"
             >
-              View Planning Packages
+              <span>View Planning Packages</span>
+              <ArrowRight className="w-4 h-4 text-gold-300 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -185,13 +188,13 @@ export default function PortfolioPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="px-8 py-3.5 bg-gold hover:bg-gold-light text-burgundy-dark font-medium text-sm tracking-widest uppercase transition-all duration-300 shadow-xl rounded-sm"
+              className="px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 font-editorial font-bold text-sm tracking-widest uppercase rounded-full shadow-[0_4px_25px_rgba(216,194,157,0.5)] transition-all transform hover:-translate-y-0.5"
             >
               Request Private Consultation
             </Link>
             <Link
               href="/venues"
-              className="px-8 py-3.5 border border-gold/40 text-gold hover:bg-gold/10 font-medium text-sm tracking-widest uppercase transition-all duration-300 rounded-sm"
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border-2 border-gold-400/80 hover:border-gold-300 font-editorial font-bold text-sm tracking-widest uppercase rounded-full backdrop-blur-md transition-all transform hover:-translate-y-0.5"
             >
               Browse Heritage Venues
             </Link>

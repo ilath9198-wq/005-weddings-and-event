@@ -54,7 +54,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-sand text-charcoal">
       {/* 1. ATMOSPHERIC PHOTOGRAPHIC HERO */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[75vh] md:min-h-[82vh] flex items-center justify-center overflow-hidden py-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2000&q=85"
@@ -63,40 +63,38 @@ export default function ContactPage() {
             priority
             className="object-cover object-center scale-105 transition-transform duration-1000"
           />
-          {/* Dark luxury gradient scrims */}
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-black/50" />
-          <div className="absolute inset-0 bg-burgundy/25 mix-blend-multiply" />
+          {/* Deep luxury gradient scrims for maximum contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-burgundy-950/95 via-burgundy-950/85 to-charcoal-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-burgundy-950 via-transparent to-burgundy-950/70" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-ivory py-24">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-charcoal/60 backdrop-blur-md text-gold text-xs uppercase tracking-[0.25em] mb-6">
-            <Compass className="w-3.5 h-3.5" />
-            <span>Private Consultations & Enquiries</span>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-white py-24">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-900/90 border border-gold-400 text-gold-300 text-xs font-mono font-medium tracking-widest uppercase mb-6 backdrop-blur-md shadow-gold-glow">
+            <Compass className="w-3.5 h-3.5 text-gold-400" />
+            <span>PRIVATE CONSULTATIONS & ROYAL ENQUIRIES</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] mb-6 tracking-tight text-ivory drop-shadow-md">
+          <h1 className="font-editorial text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-wide text-white leading-[1.08] mb-6 drop-shadow-md">
             Begin Your Wedding Journey <br />
-            <span className="italic font-light text-gold-light">With Our Concierge</span>
+            <span className="text-gold-gradient italic font-normal lowercase font-editorial">& With Our Concierge</span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory/80 font-light leading-relaxed mb-10">
-            Join our founding directors over fine tea at our private studios in New Delhi, Udaipur, and Mumbai, or begin with a digital celebration brief.
+          <p className="font-editorial text-lg sm:text-2xl italic text-white/95 leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow">
+            &ldquo;Join our founding directors over fine tea at our private studios in New Delhi, Udaipur, and Mumbai, or begin with a digital celebration brief.&rdquo;
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-ivory/80">
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-gold" />
-              <span>+91 98200 44521</span>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gold-200">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-burgundy-950/80 border border-gold-400/40 backdrop-blur-md">
+              <Phone className="w-4 h-4 text-gold-400" />
+              <span className="font-sans font-medium text-white">+91 98200 44521</span>
             </div>
-            <div className="w-1.5 h-1.5 rounded-full bg-gold/60 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-gold" />
-              <span>concierge@thegrandaffair.in</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-burgundy-950/80 border border-gold-400/40 backdrop-blur-md">
+              <Mail className="w-4 h-4 text-gold-400" />
+              <span className="font-sans font-medium text-white">concierge@thegrandaffair.in</span>
             </div>
-            <div className="w-1.5 h-1.5 rounded-full bg-gold/60 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-gold" />
-              <span>Response within 4 Business Hours</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-burgundy-950/80 border border-gold-400/40 backdrop-blur-md">
+              <Clock className="w-4 h-4 text-gold-400" />
+              <span className="font-sans font-medium text-gold-300">Response within 4 Hours</span>
             </div>
           </div>
         </div>

@@ -105,15 +105,15 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
               <button
                 onClick={() => openConsultation()}
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gold-gradient hover:bg-gold-400 text-burgundy-950 font-editorial font-bold text-base sm:text-lg tracking-wider uppercase rounded-full shadow-gold-glow transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 hover:from-gold-300 hover:to-gold-400 text-burgundy-950 font-editorial font-bold text-base sm:text-lg tracking-wider uppercase rounded-full shadow-[0_4px_25px_rgba(216,194,157,0.5)] border border-gold-300 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               >
-                <Heart className="w-4 h-4 fill-current" />
+                <Heart className="w-4 h-4 fill-current text-burgundy-950" />
                 <span>Plan Your Wedding</span>
               </button>
 
               <Link
                 href="/portfolio"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-gold-400/50 font-editorial font-bold text-base tracking-wider uppercase rounded-full backdrop-blur-md transition-all group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white border-2 border-gold-400/80 hover:border-gold-300 font-editorial font-bold text-base tracking-wider uppercase rounded-full backdrop-blur-md transition-all transform hover:-translate-y-0.5 group cursor-pointer"
               >
                 <span>Explore Our Weddings</span>
                 <ArrowRight className="w-4 h-4 text-gold-300 group-hover:translate-x-1 transition-transform" />
