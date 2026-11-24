@@ -53,17 +53,17 @@ export default function Navbar() {
         </div>
 
         {/* Main Header Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 flex items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-22 flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Wordmark */}
           <Link
             href="/"
-            className="flex flex-col group focus:outline-none shrink-0"
+            className="flex flex-col group focus:outline-none min-w-0"
             aria-label="THE GRAND AFFAIR Homepage"
           >
-            <span className="font-editorial text-2xl sm:text-3xl font-bold tracking-widest text-burgundy-950 uppercase group-hover:text-burgundy-800 transition-colors">
+            <span className="font-editorial text-lg sm:text-2xl lg:text-3xl font-bold tracking-wider sm:tracking-widest text-burgundy-950 uppercase group-hover:text-burgundy-800 transition-colors truncate">
               THE GRAND AFFAIR
             </span>
-            <span className="text-[10px] sm:text-[11px] tracking-[0.25em] text-gold-600 uppercase font-sans font-medium -mt-1">
+            <span className="text-[8px] sm:text-[10px] tracking-[0.22em] text-gold-600 uppercase font-sans font-medium -mt-0.5 sm:-mt-1">
               WEDDINGS & CELEBRATIONS
             </span>
           </Link>
@@ -75,11 +75,11 @@ export default function Navbar() {
           </div>
 
           {/* Right Header Controls */}
-          <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             {/* Phone Shortcut (Tablet / Desktop) */}
             <a
               href="tel:+919876543220"
-              className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-gold-500/40 text-xs font-sans text-burgundy-950 hover:bg-gold-500/10 transition-colors"
+              className="hidden md:inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-gold-500/40 text-xs font-sans text-burgundy-950 hover:bg-gold-500/10 transition-colors"
               aria-label="Call VIP Wedding Concierge"
             >
               <Phone className="w-3.5 h-3.5 text-gold-600" />
@@ -87,20 +87,19 @@ export default function Navbar() {
               <span className="xl:hidden">Concierge</span>
             </a>
 
-            {/* "Plan Your Wedding" Prominent CTA */}
+            {/* "Plan Your Wedding" CTA (Visible on tablet & desktop; streamlined on mobile) */}
             <button
               onClick={() => openConsultation()}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2.5 bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 font-editorial font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 shrink-0"
+              className="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 font-editorial font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 shrink-0 cursor-pointer"
             >
               <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 fill-current" />
-              <span className="hidden xs:inline whitespace-nowrap">Plan Your Wedding</span>
-              <span className="xs:hidden whitespace-nowrap">Plan</span>
+              <span className="whitespace-nowrap">Plan Your Wedding</span>
             </button>
 
             {/* Distinctive Minimalist Three-Line Hamburger Icon with Champagne-Gold Detailing */}
             <button
               onClick={() => setMenuOpen(true)}
-              className="flex items-center gap-2 p-2.5 sm:px-3.5 sm:py-2.5 rounded-full border border-gold-500/50 hover:border-burgundy-900 bg-white hover:bg-ivory-100 shadow-sm transition-all group shrink-0"
+              className="flex items-center gap-2 p-2 sm:px-3.5 sm:py-2.5 rounded-full border border-gold-500/50 hover:border-burgundy-900 bg-white hover:bg-ivory-100 shadow-sm transition-all group shrink-0 cursor-pointer"
               aria-label="Open Luxury Editorial Navigation"
             >
               <div className="space-y-1 sm:space-y-1.5 flex flex-col items-center justify-center">
