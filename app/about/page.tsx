@@ -107,7 +107,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-2 border-gold-500/40 shadow-luxury">
                 <Image
-                  src="https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=1200&q=85"
+                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=85"
                   alt="Couple Portrait in Grand Mandap"
                   fill
                   className="object-cover"
